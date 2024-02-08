@@ -38,3 +38,6 @@ TELEGRAM_BOT_NAME=your_bot_name_bot
 POLL_INTERVAL=30
 ```
  
+# Connect to your Telegram account
+Once the service is running, start a chat with your Telegram bot account and send it the message `/subscribe`.
+Multiple Telegram accounts can connect to the bot and subscribe and each one will recieve a notification everytime the Alarm siren is triggered.
