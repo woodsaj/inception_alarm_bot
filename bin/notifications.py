@@ -5,22 +5,22 @@ import datetime
 import json
 import sys
 from time import sleep
-import os.path
-import os.environ
+from os import path, environ
 
-apiKey=os.environ.get('INCEPTION_API_KEY')
-inception_addr=os.environ.get('INCEPTION_ADDR')
-telgram_bot_token=os.environ.get('TELEGRAM_BOT_TOKEN')
-telegram_bot_name=os.environ.get('TELEGRAM_BOT_NAME')
-poll_interval=int(os.environ.get('POLL_INTERVAL'))
+
+apiKey=environ.get('INCEPTION_API_KEY')
+inception_addr=environ.get('INCEPTION_ADDR')
+telgram_bot_token=environ.get('TELEGRAM_BOT_TOKEN')
+telegram_bot_name=environ.get('TELEGRAM_BOT_NAME')
+poll_interval=int(environ.get('POLL_INTERVAL'))
 
 state_file = "./run/state"
-if not os.path.isfile(state_file):
+if not path.isfile(state_file):
     with open(state_file, "w") as f:
         json.dump({}, f, indent=4)
 
 subscriber_file = "./run/subscribers"
-if not os.path.isfile(subscriber_file):
+if not path.isfile(subscriber_file):
     with open(subscriber_file, "w") as f:
         json.dump({}, f, indent=4)
 
