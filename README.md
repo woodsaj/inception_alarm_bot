@@ -5,14 +5,11 @@ This is a simple python script that polls an Inception home alarm system for eve
 # Installation
 ```
 cd /opt
-git clone git@github.com:woodsaj/inception_alarm_bot.git
-cd inception_alarm_bot
-cp inception_alarm_bot.service /etc/systemd/system/
-systemctl daemon-reload
-systemctl enable inception_alarm_bot.service
+git clone https://github.com/woodsaj/inception_alarm_bot.git
+/opt/inception_alarm_bot/install.sh
 ```
 
-The service will then start when the machine it is on next starts.  To start immediately, after configuring run
+The service will then start when the machine it is on next starts.  To start immediately, after configuring, run
 ```
 systemctl start inception_alarm_bot.service
 ```
@@ -40,5 +37,4 @@ TELEGRAM_BOT_NAME=your_bot_name_bot
 # how frequently (in seconds) to poll the Inception API for new events.
 POLL_INTERVAL=30
 ```
-
-## 
+ 
