@@ -1,0 +1,11 @@
+# 'USER API Token' configured within the Inception web portal for a user.
+INCEPTION_API_KEY=XXX
+# IP address of your local Inception system
+INCEPTION_ADDR=192.168.100.4
+
+# Telegram bot token and bot name.  use '@BoTFather' to create one if needed.
+TELEGRAM_BOT_TOKEN=xxxxx
+TELEGRAM_BOT_NAME=your_bot_name_bot
+
+# how frequently (in seconds) to poll the Inception API for new events.
+POLL_INTERVAL=30

@@ -1,0 +1,16 @@
+[Unit]
+Description=Send Telegram notifications when Inception alarm siren activates
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/opt/inception_alarm_bot
+User=daemon
+EnvironmentFile=/opt/inception_alarm_bot/conf/home-alarm.conf
+ExecStart=/opt/inception_alarm_bot/bin/notifications.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
