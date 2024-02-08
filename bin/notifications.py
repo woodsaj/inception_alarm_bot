@@ -6,13 +6,13 @@ import json
 import sys
 from time import sleep
 import os.path
-import os.environment
+import os.environ
 
-apiKey=os.environment.get('INCEPTION_API_KEY')
-inception_addr=os.environment.get('INCEPTION_ADDR')
-telgram_bot_token=os.environment.get('TELEGRAM_BOT_TOKEN')
-telegram_bot_name=os.environment.get('TELEGRAM_BOT_NAME')
-poll_interval=int(os.environment.get('POLL_INTERVAL'))
+apiKey=os.environ.get('INCEPTION_API_KEY')
+inception_addr=os.environ.get('INCEPTION_ADDR')
+telgram_bot_token=os.environ.get('TELEGRAM_BOT_TOKEN')
+telegram_bot_name=os.environ.get('TELEGRAM_BOT_NAME')
+poll_interval=int(os.environ.get('POLL_INTERVAL'))
 
 state_file = "./run/state"
 if not os.path.isfile(state_file):
